@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-ARG GITHUB_RUNNER_VERSION="2.165.2"
+ARG GITHUB_RUNNER_VERSION="2.168.0"
 
 ENV RUNNER_NAME "runner"
 ENV GITHUB_PAT ""
@@ -14,6 +14,8 @@ RUN apt-get update \
         sudo \
         git \
         jq \
+        net-utils \
+        busybox \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -m github \
