@@ -17,6 +17,11 @@ RUN apt-get update \
         iputils-ping \
         net-tools \
         busybox \
+        apt-transport-https \
+        ca-certificates \
+        gnupg-agent \
+        lsb-release \
+        software-properties-common \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -m github \
