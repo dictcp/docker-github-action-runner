@@ -14,7 +14,8 @@ RUN apt-get update \
         sudo \
         git \
         jq \
-        net-utils \
+        iputils-ping \
+        net-tools \
         busybox \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
